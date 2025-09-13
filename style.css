@@ -1,0 +1,141 @@
+:focus-visible {
+    outline: 2px solid #14b8a6;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1606236892348-3a5f3d321156?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-button {
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.text-shadow-sm {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Stiluri pentru liniile iconiței hamburger */
+.hamburger-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+.hamburger-line.top {
+    transform: translateY(-10px);
+}
+.hamburger-line.bottom {
+    transform: translateY(10px);
+}
+
+/* Stiluri pentru animația iconiței în 'X' */
+#hamburger-button.open .hamburger-line.top {
+    transform: rotate(45deg);
+}
+#hamburger-button.open .hamburger-line.middle {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+#hamburger-button.open .hamburger-line.bottom {
+    transform: rotate(-45deg);
+}
+
+
+/* Stilurile pentru meniul mobil */
+#mobile-menu {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.menu-hidden {
+    transform: translateX(100%);
+    pointer-events: none;
+}
+
+.menu-visible {
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+/* Stiluri pentru modal */
+.modal-overlay {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.modal-hidden {
+    pointer-events: none;
+}
+.modal-hidden .modal-overlay {
+    opacity: 0;
+}
+.modal-hidden .modal-content {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.modal-visible {
+    pointer-events: auto;
+}
+.modal-visible .modal-overlay {
+    opacity: 1;
+}
+.modal-visible .modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stiluri pentru carouselul de testimoniale */
+.testimonial-swiper {
+    padding-bottom: 50px !important;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #f3f4f6;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Personalizarea culorilor pentru paginarea Swiper */
+.swiper-pagination-bullet {
+    background-color: #9ca3af;
+    opacity: 0.8;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #0d9488 !important;
+}
